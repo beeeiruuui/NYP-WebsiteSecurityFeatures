@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Login </title>
+		<link rel="stylesheet" href="../static/login.css">
+		<script src="https://www.google.com/recaptcha/api.js"></script>
+	</head>
+	<body>
+		<div class="logincontent" align="center">
+			<div class="logintop">
+				<h1>Forget Password</h1>
+			</div></br></br></br></br>
+			<div class="loginbottom">
+			<form action="{{ url_for('forgetpass')}}" method="POST" autocomplete="off">
+			<input type="number" maxlength="4" name="otp" placeholder="Enter Your OTP" class="textbox" id="otp" required></br></br></br>
+			<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+			<input type="submit" class="btn" value="Next">
+			</form></br></br>
+
+            </div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Two factor Authentication </title>
+		<link rel="stylesheet" href="../static/login.css">
+	</head>
+	<body>
+		<div class="logincontent" align="center">
+			<div class="logintop">
+				<h1>Two factor Authentication</h1>
+			</div></br></br></br></br>
+			<div class="loginbottom">
+			<form action="{{ url_for('twofactor')}}" method="post" autocomplete="off">
+			<div class="msg">{{ msg }}</div>
+			<input type="hidden" name="authyid" id="authyid" value="{{ authyid }}">
+			<input type="text" name="TFA" placeholder="Enter Your Two factor Token" class="textbox" id="TFA" required></br></br>
+
+
+			<input type="submit" class="btn" value="Submit">
+			</form></br></br>
+
+			</div>
+		</div>
+	</body>
+</html>
